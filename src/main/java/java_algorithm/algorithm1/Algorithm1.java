@@ -8,7 +8,6 @@ package java_algorithm.algorithm1;
 public class Algorithm1 {
 	private static int max = 1000; 
 	
-	
 	public static void func1 () {
 		int i;
 		int sum = 0;
@@ -58,5 +57,4 @@ public class Algorithm1 {
 //		func2();
 		func3();
 	}
-
 }

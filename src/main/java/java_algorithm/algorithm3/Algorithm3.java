@@ -7,7 +7,11 @@ import java.util.Map;
  * 
  * @author catenoid-dev1
  * 
- *
+ *  반복되지 않는 첫 문자란
+ * 	"ABBACF"     => C
+ * 	"ABCDEF"     => A
+ * 	"AABBCD"     => C
+ *	
  */
 public class Algorithm3 {
 	public static String func1 (String a) {

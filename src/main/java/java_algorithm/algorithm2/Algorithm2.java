@@ -1,18 +1,18 @@
 package java_algorithm.algorithm2;
 /**
  * 
- * @author catenoid-dev1
+ * @author jkkim
  * 
  * int의 max값 구하기 
  *
  */
 public class Algorithm2 {
 	public static int func1 () {
-		int criteria = 1;
-	    while ((criteria = criteria << 1) > 0) {
+		int number = 1;
+	    while ((number = number << 1) > 0) {
 	    }
-	    System.out.println(criteria);
-	    return ~criteria;
+	    System.out.println(number);
+	    return ~number;
 	}
 	
 	public static void func2 () {
