@@ -17,11 +17,31 @@ public class Algorithm5 {
 	public static void func1 () throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		System.out.println(st.nextToken());
-		System.out.println(st.nextToken());
-		System.out.println(st.nextToken());
+		int count = 0;
+		int[] targetYear = new int[3];
+		int[] compareYear = new int[3];
+		
+		targetYear[0] = Integer.parseInt(st.nextToken());
+		targetYear[1] = Integer.parseInt(st.nextToken());
+		targetYear[2] = Integer.parseInt(st.nextToken());
+		
+		for (int i=0; i<3; i++) {
+			compareYear[i] = targetYear[0];
+		}
+		
+		while (!Arrays.equals(targetYear, compareYear)) {
+			count += 15;
+			compareYear[1] += 15;
+			compareYear[2] += 15;
+			compareYear[1] = compareYear[1] > 28 ? compareYear[1] % 28 : compareYear[1];
+			compareYear[2] = compareYear[2] > 19 ? compareYear[2] % 19 : compareYear[2];
+		}
+		
+		br.close();
+		System.out.println(targetYear[0] + count);
 	}
 	
+	// 출처 https://blog.naver.com/gngh0101/221225045773
 	public static void func2 () throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -55,8 +75,8 @@ public class Algorithm5 {
     }
 	
 	public static void main(String[] args) throws IOException {
-//		func1();
-		func2();
+		func1();
+//		func2();
 	}
 
 }
