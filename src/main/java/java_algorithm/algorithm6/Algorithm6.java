@@ -19,8 +19,9 @@ public class Algorithm6 {
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
         System.out.println("입력 받은 값  a : " + a + " , b : " + b);
-        
+        int h = b/2;
 		while (a != b) {
+			// Math.abs(a - h) < Math.abs(a * 2 - h)
 			if (a < b) {
 				if (Math.abs(a*2 - b) < Math.abs(a-b) && a*2 <= 10000) {
 					a *= 2;
